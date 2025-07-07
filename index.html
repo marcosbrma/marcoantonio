@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Link para o arquivo JavaScript.  -->
+    <script src="script.js" defer></script>
+
+    <!-- Estilos para o botão e a mensagem de motivação -->
+    <style>
+            .motivacional-container {
+            text-align: center;
+            margin-top: 2rem;
+            padding: 1rem;
+            background-color: #eaf2f8;
+            border-radius: 8px;
+        }
+
+        #botaoMensagem {
+            background-color: var(--cor-primaria, #3498db);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        
+        #botaoMensagem:hover {
+            background-color: var(--cor-secundaria, #2c3e50);
+        }
+
+        #mensagem {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--cor-secundaria, #2c3e50);
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- O cabeçalho é o mesmo em todas as páginas -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Página Inicial</a>
+            <ul>
+                <li><a href="sobre.html">Sobre Mim</a></li>
+                <li><a href="formacao.html">Formação</a></li>
+                <li><a href="portfolio.html">Portfólio</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Conteúdo principal da página inicial -->
+    <main>
+        <section id="inicio" class="secao">
+            <div class="container">
+                <h2 class="secao-titulo">Seja bem-vindo ao meu site!</h2>
+                <div class="sobre-conteudo">
+                    <img src="imagens/teste2.jpg" alt="Foto de perfil de Marco Antonio" class="foto-perfil">
+                    <div>
+                        <p>
+                            Sou <strong>Marco Antonio</strong>, estudante de <strong>Análise e Desenvolvimento de Sistemas</strong> e técnico em <strong>Redes de Computadores</strong>. Tenho experiência com tecnologias como <strong>Python</strong>, <strong>JavaScript</strong>, <strong>MySQL</strong>, <strong>Linux</strong>, e muito mais.
+                        </p>
+                        <p>
+                            Meu objetivo é criar soluções completas para empresas e projetos, utilizando meu conhecimento em programação e infraestrutura de TI.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Container para o botão e a mensagem -->
+                <div class="motivacional-container">
+                    <button id="botaoMensagem" onclick="mostrarMensagem()">Clique para uma mensagem</button>
+                    <p id="mensagem"></p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- O rodapé também é o mesmo em todas as páginas -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 - Desenvolvido por Marco Antonio.</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

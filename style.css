@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #f4f4f9;
+    --cor-fundo-alt: #ffffff;
+    --cor-texto: #333333;
+    --cor-primaria: #3498db;
+    --cor-secundaria: #2c3e50;
+    --sombra-suave: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Estilos Gerais do Corpo --- */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Cabeçalho e Navegação --- */
+header {
+    background-color: var(--cor-secundaria);
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra-suave);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--cor-primaria);
+}
+
+/* --- Estrutura das Seções --- */
+main {
+    padding-top: 2rem; 
+}
+
+.secao {
+    padding: 4rem 0;
+    min-height: calc(100vh - 250px);
+    display: flex;
+    align-items: center;
+}
+
+.secao-titulo {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 3rem;
+}
+
+/* --- Seção Sobre Mim --- */
+.sobre-conteudo {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.foto-perfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-primaria);
+    box-shadow: var(--sombra-suave);
+}
+
+/* --- Seção Formação --- */
+#formacao ul {
+    list-style-position: inside;
+}
+
+#formacao h3 {
+    color: var(--cor-secundaria);
+    margin-bottom: 1rem;
+}
+
+.titulo-idiomas {
+    margin-top: 2rem;
+}
+
+/* --- Seção Contato --- */
+.contato-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contato-form label {
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contato-form button {
+    padding: 1rem;
+    background-color: var(--cor-primaria);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contato-form button:hover {
+    background-color: var(--cor-secundaria);
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--cor-secundaria);
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 2rem;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    header nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .secao {
+        min-height: auto; 
+    }
+
+    .secao-titulo {
+        font-size: 2rem;
+    }
+
+    .sobre-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
