@@ -85,16 +85,6 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'cadastrar') {
     <link rel="stylesheet" href="style.css?v=13">
     <style>
         .input-wrapper { position: relative; }
-        .toggle-password { 
-            position: absolute; 
-            right: 15px; 
-            top: 50%; 
-            transform: translateY(-50%); 
-            cursor: pointer; 
-            color: #94a3b8; 
-            z-index: 10;
-        }
-        .toggle-password:hover { color: #3b82f6; }
     </style>
 </head>
 <body class="login-body">
@@ -130,8 +120,7 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'cadastrar') {
                 <label style="font-size: 0.9rem; font-weight: 500; color: #475569; display: block; margin-bottom: 5px;">Senha</label>
                 <div class="input-wrapper">
                     <i class="fas fa-lock"></i>
-                    <input type="password" id="senha_login" name="senha_login" placeholder="Digite sua senha" required style="width: 100%; padding: 12px 40px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Poppins', sans-serif;">
-                    <i class="fas fa-eye toggle-password" onclick="togglePass('senha_login', this)"></i>
+                    <input type="password" id="senha_login" name="senha_login" placeholder="Digite sua senha" required style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Poppins', sans-serif;">
                 </div>
             </div>
             <button type="submit" class="btn-submit" style="width: 100%;">Entrar</button>
@@ -150,15 +139,13 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'cadastrar') {
                 <div class="input-group">
                     <div class="input-wrapper">
                         <i class="fas fa-key"></i>
-                        <input type="password" id="senha_cadastro" name="senha_cadastro" placeholder="Crie uma senha" required style="width: 100%; padding: 12px 40px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Poppins', sans-serif;">
-                        <i class="fas fa-eye toggle-password" onclick="togglePass('senha_cadastro', this)"></i>
+                        <input type="password" id="senha_cadastro" name="senha_cadastro" placeholder="Crie uma senha" required style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Poppins', sans-serif;">
                     </div>
                 </div>
                 <div class="input-group">
                     <div class="input-wrapper">
                         <i class="fas fa-check-double"></i>
-                        <input type="password" id="senha_confirmacao" name="senha_confirmacao" placeholder="Confirme sua senha" required style="width: 100%; padding: 12px 40px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Poppins', sans-serif;">
-                        <i class="fas fa-eye toggle-password" onclick="togglePass('senha_confirmacao', this)"></i>
+                        <input type="password" id="senha_confirmacao" name="senha_confirmacao" placeholder="Confirme sua senha" required style="width: 100%; padding: 12px 12px 12px 40px; border: 1px solid #cbd5e1; border-radius: 8px; font-family: 'Poppins', sans-serif;">
                     </div>
                 </div>
                 <button type="submit" class="btn-submit" style="width: 100%; background-color: #3b82f6;">Criar Conta Segura</button>
@@ -169,20 +156,5 @@ if (isset($_POST['acao']) && $_POST['acao'] === 'cadastrar') {
     <footer class="app-footer login-footer">
         <p>Desenvolvido por <strong>Marco Antonio Alves de Miranda</strong> - RU 5079998</p>
     </footer>
-
-    <script>
-        function togglePass(inputId, iconEl) {
-            const input = document.getElementById(inputId);
-            if (input.type === 'password') {
-                input.type = 'text';
-                iconEl.classList.remove('fa-eye');
-                iconEl.classList.add('fa-eye-slash');
-            } else {
-                input.type = 'password';
-                iconEl.classList.remove('fa-eye-slash');
-                iconEl.classList.add('fa-eye');
-            }
-        }
-    </script>
 </body>
 </html>
